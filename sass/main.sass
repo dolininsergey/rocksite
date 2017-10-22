@@ -1,0 +1,655 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	font-size: 16px
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	z-index: 1002
+	background-image: url(../img/preloader.gif);
+	background-repeat: no-repeat
+	background-position: center
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+// Starting from here
+
+.button
+	display: inline-block
+	border: none
+	text-decoration: none
+	//color: $accent
+	background-color: #fff
+	padding: 6% 19%
+	font-size: 0.75rem
+	text-transform: uppercase
+	font-family: droid
+	font-weight: bold
+	//letter-spacing: 3px
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	white-space: nowrap
+	cursor: pointer
+	&:hover
+		text-decoration: none
+
+
+.header
+	height: 100vh
+	background-size: cover
+	background-position: center 
+	display: flex
+	flex-direction: column
+	justify-content: center
+	position: relative
+	text-align: center
+	.discover
+		.button
+			background-color: $accent
+			color: #fff
+			padding: 13px 45px
+			&:hover
+				background-color: #fff
+				color: $accent
+				text-decoration: none
+				transition: background-color .20s ease
+	nav
+		width: 100%
+		min-height: 85px
+		background-color: $accent
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		display: flex
+		justify-content: space-around
+		align-items: center
+		.left-menu
+			ul
+				list-style-type: none
+				display: flex
+				justify-content: center
+				padding-left: 0px
+				flex-wrap: wrap
+				li
+					margin-right: 30px
+					a
+						text-transform: uppercase
+						font-size: 0.8rem
+						font-family: droid
+						font-weight: bold
+						color: #fff
+						&:hover
+							text-decoration: none
+					&:last-child
+						margin-right: 0px
+		.right-menu
+			> ul
+				list-style-type: none
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding-left: 0px
+				li
+					margin-left: 30px
+					a
+						text-transform: uppercase
+						font-size: 0.8rem
+						font-family: droid
+						font-weight: bold
+						color: #fff
+						&:hover
+							text-decoration: none
+					&:first-child
+						margin-left: 0px
+					.fa
+						font-size: 1.5rem
+						margin-right: 15px
+				.button
+					color: $accent
+							
+	.header-tagline
+		text-align: center
+		.lets
+			text-transform: uppercase
+			font-family: oswald
+			font-weight: bold
+			font-size: 6.5rem
+			color: $accent
+			white-space: nowrap
+		.cantus
+			font-size: 4rem
+			font-family: vibes
+			color: $common-grey	
+			white-space: nowrap
+
+section
+	margin-top: 5%
+.content
+	display: flex
+	flex-direction: column
+	align-items: center	
+
+.content-item
+	padding-left: 0
+	padding-right: 0
+	.content-item-headers
+		font-size: 2rem
+		.h4
+			font-family: oswald
+			color: $common-grey
+			text-transform: uppercase
+		.h3
+			font-family: vibes
+			color: $accent	
+
+.musicians-group
+	display: flex
+	justify-content: space-between
+.member
+	margin-right: 20px
+	position: relative
+	&:last-child
+		margin-right: 0px
+	.member-img
+		max-height: 420px
+		overflow: hidden
+		img
+			max-width: 300px
+	.member-description
+		color: #fff
+		background-color: $accent
+		padding: 10px
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		.mem-name
+		 font-family: oswald
+		 font-size: 1.25rem
+		.mem-category
+			font-family: droid
+			font-size: 0.875rem
+		.mem-socials 
+			padding: 0
+			display: none
+			> ul
+				display: flex
+				list-style-type: none
+				text-transform: uppercase
+				padding: 0px
+				li
+					margin-right: 15px
+					a
+						color: #fff
+						font-family: opensans
+						font-size: 0.875rem
+						&:hover
+							text-decoration: none
+					&:last-child
+						margin-right: 0px
+				.fa
+					font-size: 1.375rem
+					margin-right: 10px
+
+// Owl Carousel
+
+.members-carousel 
+	position: relative
+
+.owl-nav
+	display: flex
+	position: absolute
+	top: -50px
+	right: 0
+	font-size: 1.5rem
+	color: #fff
+	.owl-next
+		margin-left: 5px
+	> div
+		width: 30px
+		height: 30px
+		line-height: 30px
+		background-color: $accent
+		text-align: center
+
+.border-line
+	height: 1px
+	background-color: #DFDFDF
+	margin-top: 7%
+	margin-bottom: 7%
+
+.content-item-conserts
+	margin-top: 4%
+
+.concerts-group
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.concert-block
+		position: relative
+		
+		.content-item-headers
+		.album
+			display: flex
+			align-items: center
+			.album-img
+				min-width: 250px
+				min-height: 270px
+				background-size: cover
+				background-position: right
+				opacity: 0.95
+				display: flex
+				align-items: center
+				justify-content: center
+				font-family: oswald
+				font-weight: bold
+				text-align: center
+				font-size: 2.5rem
+				color: #fff
+			.concert-description
+				ul
+					list-style-type: none
+					li
+						font-family: droid
+						font-size: 0.97rem
+						color: $common-grey
+						&:first-child
+							font-family: oswald
+							font-weight: medium
+							font-size: 1.375rem
+							white-space: nowrap
+	.video-block
+		iframe
+			width: 320px
+			height: 270px		
+
+.founder-block
+	background-color: $common-grey
+	background-image: url(../img/founder.png)
+	background-repeat: no-repeat
+	background-position: 280px -150px
+	background-size: cover
+	padding-top: 50px
+	padding-left: 80px
+	padding-bottom: 50px
+	margin-top: 6%
+	margin-bottom: 6%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.founder-text
+		font-family: droid
+		color: #fff
+		font-size: 1rem
+		.founder-header
+			font-family: oswald
+			font-size: 1.7rem
+			font-weight: medium
+			text-transform: uppercase
+	.button
+		color: $accent
+		background-color: #fff
+		padding: 11px 30px
+
+.songs-and-instagram
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.instagram-block 
+		.instagram-pair
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			img
+				max-width: 160px
+				max-height: 160px
+				margin-left: 20px
+				margin-bottom: 20px
+				&:first-child
+					margin-left: 0px
+
+
+// Audio Player
+.ttw-music-player
+  width: 370px
+  font-family: droid
+  .player
+    width: 100%
+  .album-cover
+    position: relative
+    float: left
+    background: #fff url(../images/album-cover-bg.jpg) no-repeat 0 0 scroll
+    display: block
+    height: 125px
+    width: 125px
+    .img
+      display: block
+      height: 125px
+      width: 125px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      height: 125px
+      width: 125px
+  .track-info
+    margin: 8px 0 0 30px
+    float: left
+    font-size: 0.75rem
+    color: $common-grey
+    p
+      margin: 0 0 8px 0
+  .player .title
+    font-size: 0.875rem
+  .artist
+    margin-left: 4px
+  .rating-star
+    width: 15px
+    height: 16px
+    display: block
+    float: left
+    background: transparent url('../libs/audio-player/plugin/images/rating-off.png') no-repeat center center scroll
+    cursor: pointer
+  .player-controls
+    width: 215px
+    height: 30px
+    background: transparent url('../libs/audio-player/plugin/images/player-bg.png') repeat 0 0 scroll;
+    background: #fff
+    float: left
+    margin: 12px 0 0 30px
+    .main
+      width: 52px
+      height: 12px
+      margin: 9px 9px
+      float: left
+    div
+      float: left
+      cursor: pointer
+  .previous, .next
+    height: 10px
+    width: 15px
+    margin: 1px 0
+  .play, .pause
+    width: 8px
+    height: 12px
+    margin: 0 7px
+  .previous
+    background: transparent url('../libs/audio-player/plugin/images/player-previous.png') no-repeat center center scroll
+  .next
+    background: transparent url('../libs/audio-player/plugin/images/player-next.png') no-repeat center center scroll
+  .play
+    background: transparent url('../libs/audio-player/plugin/images/player-play.png') no-repeat center center scroll
+  .pause
+    background: transparent url('../libs/audio-player/plugin/images/player-pause.png') no-repeat center center scroll
+  .progress-wrapper
+    height: 4px
+    width: 145px
+    float: left
+    margin: 11px 0px 10px 0
+    background-color: #dedede
+  .progress
+    height: 9px
+    width: 135px
+    cursor: pointer
+  .elapsed
+    height: 3px
+    margin: 1px
+    width: 60%
+    background-color: #FF5415
+  .unused-controls
+    display: none !important
+  .description
+    clear: both
+    margin: 30px 0 0 0
+    font-size: 0.75rem
+    color: #999
+    &.showing
+      margin: 30px 0
+  .tracklist
+    color: $common-grey
+    ol
+      margin: 0
+      padding: 0
+      overflow: hidden
+    li
+      padding: 10px 0 10px 0
+      list-style-position: inside
+      position: relative
+      color: $common-grey
+      font-size: 0.8125rem
+      border-bottom: solid 1px #EBEBEB
+  .tracklist .title
+    width: 164px
+    display: inline-block
+    padding: 0 0 0 14px
+    cursor: pointer
+    color: $common-grey
+  li
+    &:nth-child(1n + 10) .title
+      padding-left: 7px
+    &.playing
+      font-size: 0.8125rem
+      color: rgb(255, 84, 21)
+      .title
+      	color: rgb(255, 84, 21)
+  .tracklist .rating
+    display: none
+  .rating-bar
+    height: 10px
+    width: 3px
+    display: block
+    float: left
+    cursor: pointer
+    background: transparent url('../libs/audio-player/plugin/images/rating-bar.png') no-repeat 0 0 scroll
+    &.on, &:hover, &.hover
+      background: transparent url('../libs/audio-player/plugin/images/rating-bar-on.png') no-repeat 0 0 scroll
+  .buy
+    width: 62px
+    height: 16px
+    display: inline-block
+    position: absolute
+    top: 9px
+    right: 0
+    border-radius: 8px
+    -moz-border-radius: 8px
+    -webkit-border-radius: 8px
+    background: transparent url('../libs/audio-player/plugin/images/buy-bg.png') repeat 0 0 scroll
+    margin: 0 0 0 10px
+    font-size: 0.625rem
+    text-align: center
+    line-height: 16px
+    text-shadow: none
+    color: #999
+    text-decoration: none
+    &:hover
+      color: #eee
+    &.not-active
+      display: none
+  .more
+    display: none
+    font-size: 0.6875rem
+    padding: 10px 0
+    margin: 10px 0
+    cursor: pointer
+    text-align: center
+    &:hover
+      color: $common-grey
+      text-decoration: underline
+
+  .show-more-button .more
+    display: block
+  .more, .album-cover .highlight, .tracklist li, .buy
+    -webkit-transition: all 0.5s ease
+    -moz-transition: all 0.5s ease
+    -o-transition: all 0.5s ease
+    transition: all 0.5s ease
+  .player:after
+    clear: both
+    content: ' '
+    display: block
+    font-size: 0
+    line-height: 0
+    visibility: hidden
+    width: 0
+    height: 0
+
+.ttw-music-player .player .title
+	font-size: 1rem
+	color: $common-grey
+
+.artist-outer
+	font-size: 0.875rem
+	text-transform: lowercase
+	margin-top: 0px
+	color: #9F9999
+
+.tracks 
+	height: 175px
+
+// Advertisemeny block
+.for-store-block
+	background-image: url('../img/girl.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	color: #fff
+	text-align: center
+	display: flex
+	justify-content: center
+	padding: 5% 0 8% 0
+	overflow: hidden
+	flex-direction: column
+	margin-top: 5%
+	.for-store-header
+		font-family: oswald
+		font-size: 1.98rem
+		font-weight: medium
+	.for-store-under-header
+		font-family: droid
+		font-size: 1.28rem
+		margin-bottom: 4%
+	.store-buttons
+		a
+			&:first-child
+				margin-right: 15px
+
+.form-block
+	margin-top: 7%
+	margin-bottom: 5%
+	form 
+		display: flex
+		position: relative
+		.subscribe
+			width: 100%
+			outline: none
+			border: none
+			border-bottom: solid 4px #999999
+			font-family: droid
+			font-size: 1rem
+			color: #282828
+		.submit-arrow
+			border: none
+			background-color: transparent
+			position: absolute
+			top: 0
+			right: 0
+			.fa
+				font-size: 1.25rem
+				color: $accent
+
+.footer-wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.footer
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	text-align: center
+	color: $common-grey
+	font-family: droid
+	font-size: 0.8125rem
+	padding-top: 3%
+	padding-bottom: 6%
+	.footer-menu
+		ul
+			list-style-type: none
+			display: flex
+			justify-content: space-between
+			padding: 0
+			li 
+				margin-right: 20px
+				a
+					text-transform: uppercase
+					color: $common-grey
+					&:hover
+						text-decoration: none
+				&:last-child 
+					margin-right: 0px				
+	.footer-copyright > .right-cantus
+		font-size: 1.75rem
+		font-family: vibes
+		color: $accent
+
+
+				
+
+
+
+
+@import "media" // Всегда в конце
