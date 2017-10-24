@@ -21,6 +21,7 @@ $(function() {
 		$('.members-carousel').owlCarousel({
 				loop: true, 
 				nav: true,
+                lazyLoad:true,
 				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
 				items: 1,
 		});
@@ -28,6 +29,7 @@ $(function() {
 		$('.concerts-carousel').owlCarousel({
 				loop: true,
 				nav: true,
+                lazyLoad:true,
 				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
 				items: 1,					
 		});
@@ -109,6 +111,7 @@ $(function() {
 
       $('.songs-block').ttwMusicPlayer(myPlaylist, {
         autoPlay:false, 
+        lazyLoad:true,
         jPlayer:{
             swfPath:'../libs/audio-player/plugin/jquery-jplayer/' //You need to override the default swf path any time the directory structure changes
         }
