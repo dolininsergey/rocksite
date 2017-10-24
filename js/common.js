@@ -117,7 +117,7 @@ $(function() {
       });
 			
 			//preloader is here
-			$('.preloader').fadeOut();
+			// $('.preloader').fadeOut();
 
 
 });
