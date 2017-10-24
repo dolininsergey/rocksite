@@ -18,21 +18,21 @@ $(function() {
 				$('#musician-3 .mem-socials').css('display', 'none');
 		});			
 
-		$('.members-carousel').owlCarousel({
-				loop: true, 
-                lazyLoad:true,
-				nav: true,
-				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-				items: 1,
-		});
+		// $('.members-carousel').owlCarousel({
+		// 		loop: true, 
+  //               lazyLoad:true,
+		// 		nav: true,
+		// 		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		// 		items: 1,
+		// });
 
-		$('.concerts-carousel').owlCarousel({
-				loop: true,
-				nav: true,
-                lazyLoad:true,
-				navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-				items: 1,					
-		});
+		// $('.concerts-carousel').owlCarousel({
+		// 		loop: true,
+		// 		nav: true,
+  //               lazyLoad:true,
+		// 		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		// 		items: 1,					
+		// });
 
 	  // Audio Player
       var myPlaylist = [{
